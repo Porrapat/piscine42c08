@@ -22,6 +22,9 @@ norminette:
 	-norminette ./ex05/${EX05}.c
 
 compile: norminette
+	-gcc ./ex01/test_ex01.c ./ex01/ft_boolean.h -Wall -Werror -Wextra -o test_ex01_test_ex01
+	-gcc ./ex01/${EX01}.c ft_boolean.h -Wall -Werror -Wextra -o test_ex01_${EX01}
+
 	-gcc ./ex00/${EX00}.c test_ex00_${EX00}.c -Wall -Werror -Wextra -o test_ex00_${EX00}
 	-gcc ./ex01/${EX01}.c test_ex01_${EX01}.c -Wall -Werror -Wextra -o test_ex01_${EX01}
 	-gcc ./ex02/${EX02}.c test_ex02_${EX02}.c -Wall -Werror -Wextra -o test_ex02_${EX02}

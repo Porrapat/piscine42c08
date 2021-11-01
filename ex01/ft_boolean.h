@@ -15,7 +15,7 @@
 
 # include <unistd.h>
 
-typedef enum {
+typedef enum my_bool{
 	false = 0,
 	true = 1
 }	t_bool;
