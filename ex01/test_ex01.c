@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecaceres <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ppetchda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/11 17:38:29 by ecaceres          #+#    #+#             */
-/*   Updated: 2019/08/11 17:38:30 by ecaceres         ###   ########.fr       */
+/*   Created: 2021/10/26 23:52:59 by porrapat          #+#    #+#             */
+/*   Updated: 2021/10/26 23:53:55 by porrapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,20 @@ void	ft_putstr(char *str)
 
 t_bool	ft_is_even(int nbr)
 {
-	return ((EVEN(nbr)) ? TRUE : FALSE);
+	int	is_even;
+
+	is_even = EVEN(nbr);
+	if (is_even)
+	{
+		return (TRUE);
+	}
+	else
+	{
+		return (FALSE);
+	}
 }
 
-int		main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	(void)argv;
 	if (ft_is_even(argc - 1) == TRUE)

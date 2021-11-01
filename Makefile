@@ -1,55 +1,69 @@
 .DEFAULT_GOAL := all
+
+EX00 = test_ex00
+EX01 = test_ex01
+EX02 = test_ex02
+EX03 = test_ex03
+EX04 = test_ex04
+EX05 = test_ex05
+
 norminette:
-	-norminette ./ex00/ft_strlen.c
-	-norminette ./ex01/ft_putstr.c
-	-norminette ./ex02/ft_putnbr.c
-	-norminette ./ex03/ft_atoi.c
-	-norminette ./ex04/ft_putnbr_base.c
-	-norminette ./ex05/ft_atoi_base.c
+	-norminette ./ex00/ft.h
+	-norminette ./ex00/${EX00}.c
+	-norminette ./ex01/ft_boolean.h
+	-norminette ./ex01/${EX01}.c
+	-norminette ./ex02/ft_abs.h
+	-norminette ./ex02/${EX02}.c
+	-norminette ./ex03/ft_point.h
+	-norminette ./ex03/${EX03}.c
+	-norminette ./ex04/ft_stock_str.h
+	-norminette ./ex04/${EX04}.c
+	-norminette ./ex05/ft_stock_str.h
+	-norminette ./ex05/${EX05}.c
 
 compile: norminette
-	-gcc ./ex00/ft_strlen.c test_ex00_ft_strlen.c -Wall -Werror -Wextra -o test_ex00_ft_strlen
-	-gcc ./ex01/ft_putstr.c test_ex01_ft_putstr.c -Wall -Werror -Wextra -o test_ex01_ft_putstr
-	-gcc ./ex02/ft_putnbr.c test_ex02_ft_putnbr.c -Wall -Werror -Wextra -o test_ex02_ft_putnbr
-	-gcc ./ex03/ft_atoi.c test_ex03_ft_atoi.c -Wall -Werror -Wextra -o test_ex03_ft_atoi
-	-gcc ./ex04/ft_putnbr_base.c test_ex04_ft_putnbr_base.c -Wall -Werror -Wextra -o test_ex04_ft_putnbr_base
-	-gcc ./ex05/ft_atoi_base.c ./ex05/ft_strlen.c test_ex05_ft_atoi_base.c -Wall -Werror -Wextra -o test_ex05_ft_atoi_base
+	-gcc ./ex00/${EX00}.c test_ex00_${EX00}.c -Wall -Werror -Wextra -o test_ex00_${EX00}
+	-gcc ./ex01/${EX01}.c test_ex01_${EX01}.c -Wall -Werror -Wextra -o test_ex01_${EX01}
+	-gcc ./ex02/${EX02}.c test_ex02_${EX02}.c -Wall -Werror -Wextra -o test_ex02_${EX02}
+	-gcc ./ex03/${EX03}.c test_ex03_${EX03}.c -Wall -Werror -Wextra -o test_ex03_${EX03}
+	-gcc ./ex04/${EX04}.c test_ex04_${EX04}.c -Wall -Werror -Wextra -o test_ex04_${EX04}
+	-gcc ./ex05/${EX05}.c test_ex05_${EX05}.c -Wall -Werror -Wextra -o test_ex05_${EX05}
 
 build-sample: compile
-	-./test_ex00_ft_strlen > result_sample_ex00_ft_strlen.txt
-	-./test_ex01_ft_putstr > result_sample_ex01_ft_putstr.txt
-	-./test_ex02_ft_putnbr > result_sample_ex02_ft_putnbr.txt
-	-./test_ex03_ft_atoi > result_sample_ex03_ft_atoi.txt
-	-./test_ex04_ft_putnbr_base > result_sample_ex04_ft_putnbr_base.txt
-	-./test_ex05_ft_atoi_base > result_sample_ex05_ft_atoi_base.txt
+	-./test_ex00_${EX00} > result_sample_ex00_${EX00}.txt
+	-./test_ex01_${EX01} > result_sample_ex01_${EX01}.txt
+	-./test_ex02_${EX02} > result_sample_ex02_${EX02}.txt
+	-./test_ex03_${EX03} > result_sample_ex03_${EX03}.txt
+	-./test_ex04_${EX04} > result_sample_ex04_${EX04}.txt
+	-./test_ex05_${EX05} > result_sample_ex05_${EX05}.txt
 
 run:	compile
-	-./test_ex00_ft_strlen > result_current_ex00_ft_strlen.txt
-	-./test_ex01_ft_putstr > result_current_ex01_ft_putstr.txt
-	-./test_ex02_ft_putnbr > result_current_ex02_ft_putnbr.txt
-	-./test_ex03_ft_atoi > result_current_ex03_ft_atoi.txt
-	-./test_ex04_ft_putnbr_base > result_current_ex04_ft_putnbr_base.txt
-	-./test_ex05_ft_atoi_base > result_current_ex05_ft_atoi_base.txt
+	-./test_ex00_${EX00} > result_current_ex00_${EX00}.txt
+	-./test_ex01_${EX01} > result_current_ex01_${EX01}.txt
+	-./test_ex02_${EX02} > result_current_ex02_${EX02}.txt
+	-./test_ex03_${EX03} > result_current_ex03_${EX03}.txt
+	-./test_ex04_${EX04} > result_current_ex04_${EX04}.txt
+	-./test_ex05_${EX05} > result_current_ex05_${EX05}.txt
 
 all:	norminette	compile run
 
 test:	all
-	-diff result_current_ex00_ft_strlen.txt result_sample_ex00_ft_strlen.txt
-	-diff result_current_ex01_ft_putstr.txt result_sample_ex01_ft_putstr.txt
-	-diff result_current_ex02_ft_putnbr.txt result_sample_ex02_ft_putnbr.txt
-	-diff result_current_ex03_ft_atoi.txt result_sample_ex03_ft_atoi.txt
-	-diff result_current_ex04_ft_putnbr_base.txt result_sample_ex04_ft_putnbr_base.txt
-	-diff result_current_ex05_ft_atoi_base.txt result_sample_ex05_ft_atoi_base.txt
+	-diff result_current_ex00_${EX00}.txt result_sample_ex00_${EX00}.txt
+	-diff result_current_ex01_${EX01}.txt result_sample_ex01_${EX01}.txt
+	-diff result_current_ex02_${EX02}.txt result_sample_ex02_${EX02}.txt
+	-diff result_current_ex03_${EX03}.txt result_sample_ex03_${EX03}.txt
+	-diff result_current_ex04_${EX04}.txt result_sample_ex04_${EX04}.txt
+	-diff result_current_ex05_${EX05}.txt result_sample_ex05_${EX05}.txt
 
 clean:
 	-rm -rf */*.out
 	-rm -rf result_current_ex*.txt
-	-rm test_ex00_ft_strlen
-	-rm test_ex01_ft_putstr
-	-rm test_ex02_ft_putnbr
-	-rm test_ex03_ft_atoi
-	-rm test_ex04_ft_putnbr_base
-	-rm test_ex05_ft_atoi_base
+	-rm test_ex00_${EX00}
+	-rm test_ex01_${EX01}
+	-rm test_ex02_${EX02}
+	-rm test_ex03_${EX03}
+	-rm test_ex04_${EX04}
+	-rm test_ex05_${EX05}
 
 clean-sample:
 	-rm -rf result_sample_ex*.txt
