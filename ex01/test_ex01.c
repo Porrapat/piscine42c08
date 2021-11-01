@@ -18,6 +18,11 @@ void	ft_putstr(char *str)
 		write(1, str++, 1);
 }
 
+int	EVEN(int number)
+{
+	return (number % 2 == 0);
+}
+
 t_bool	ft_is_even(int nbr)
 {
 	int	is_even;

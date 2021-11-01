@@ -18,7 +18,7 @@ void	set_point(t_point *point)
 	point->y = 21;
 }
 
-int		main(void)
+int	main(void)
 {
 	t_point	point;
 

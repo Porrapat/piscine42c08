@@ -14,7 +14,7 @@
 
 #include "ft_stock_str.h"
 
-int					ft_str_length(char *str)
+int	ft_str_length(char *str)
 {
 	int	index;
 
@@ -24,13 +24,14 @@ int					ft_str_length(char *str)
 	return (index);
 }
 
-char				*ft_strdup(char *src)
+char	*ft_strdup(char *src)
 {
 	int		index;
 	char	*dest;
 
 	index = 0;
-	if ((dest = (char *)malloc(ft_str_length(src) * sizeof(char) + 1)) == NULL)
+	dest = (char *)malloc(ft_str_length(src) * sizeof(char) + 1);
+	if (dest == NULL)
 		return (0);
 	while (src[index])
 	{
@@ -47,7 +48,8 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 	struct s_stock_str	*array;
 
 	ac = ac + 0;
-	if (!(array = malloc((ac + 1) * sizeof(struct s_stock_str))))
+	array = malloc((ac + 1) * sizeof(struct s_stock_str));
+	if (!array)
 		return (NULL);
 	index = 0;
 	while (index < ac)

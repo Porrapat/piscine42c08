@@ -15,7 +15,7 @@
 
 #include "ft_stock_str.h"
 
-int					ft_str_length(char *str)
+int	ft_str_length(char *str)
 {
 	int	index;
 
@@ -25,7 +25,7 @@ int					ft_str_length(char *str)
 	return (index);
 }
 
-char				*ft_strdup(char *src)
+char	*ft_strdup(char *src)
 {
 	int		index;
 	char	*dest;
@@ -42,7 +42,7 @@ char				*ft_strdup(char *src)
 	return (dest);
 }
 
-struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
+struct	s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
 	int					index;
 	struct s_stock_str	*array;
@@ -62,7 +62,7 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 	return (array);
 }
 
-int					main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	int					index;
 	struct s_stock_str	*structs;

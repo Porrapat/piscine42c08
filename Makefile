@@ -11,9 +11,7 @@ norminette:
 	-norminette ./ex00/ft.h
 	-norminette ./ex00/${EX00}.c
 	-norminette ./ex01/ft_boolean.h
-	-norminette ./ex01/${EX01}.c
 	-norminette ./ex02/ft_abs.h
-	-norminette ./ex02/${EX02}.c
 	-norminette ./ex03/ft_point.h
 	-norminette ./ex03/${EX03}.c
 	-norminette ./ex04/ft_stock_str.h
