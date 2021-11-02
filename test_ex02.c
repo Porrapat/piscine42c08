@@ -10,9 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#include <stdio.h>
+
+#include "./ex02/ft_abs.h"
+
+int	ABS(int value)
+{
+	if (value < 0)
+	{
+		return (-value);
+	}
+	else
+	{
+		return (value);
+	}
+}
 
 int	main(void)
 {
-	return (0);
+	int	index;
+
+	index = -5;
+	while (index < 5)
+	{
+		printf("macros::abs(%d) = %d\n", index, ABS(index));
+		index++;
+	}
 }
