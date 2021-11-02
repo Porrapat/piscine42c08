@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_point.h"
+#include "./ex03/ft_point.h"
 
 void	set_point(t_point *point)
 {

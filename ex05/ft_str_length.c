@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stock_str.h                                     :+:      :+:    :+:   */
+/*   ft_str_length.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppetchda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,16 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STOCK_STR_H
-# define FT_STOCK_STR_H
-
-int	ft_str_length(char *str);
-
-typedef struct s_stock_str
+int	ft_str_length(char *str)
 {
-	int			size;
-	char		*str;
-	char		*copy;
-}				t_stock_str;
+	int	index;
 
-#endif
+	index = 0;
+	while (str[index])
+		index++;
+	return (index);
+}
