@@ -1,0 +1,10 @@
+macros::abs(-5) = 5
+macros::abs(-4) = 4
+macros::abs(-3) = 3
+macros::abs(-2) = 2
+macros::abs(-1) = 1
+macros::abs(0) = 0
+macros::abs(1) = 1
+macros::abs(2) = 2
+macros::abs(3) = 3
+macros::abs(4) = 4
