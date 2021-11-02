@@ -43,9 +43,9 @@ test:	all
 	-diff result_current_ex01.txt result_sample_ex01.txt
 	-diff result_current_ex02.txt result_sample_ex02.txt
 	-diff result_current_ex03.txt result_sample_ex03.txt
-	-cat result_current_ex04_ft_strs_to_tab.txt | wc -l > result_ex04_current.txt
+	-cat result_current_ex04_ft_strs_to_tab.txt | wc -l | awk 'END{print NR}' > result_ex04_current.txt
 	-diff result_ex04_current.txt result_ex04_sample.txt
-	-cat result_current_ex05_ft_show_tab.txt | wc -l > result_ex05_current.txt
+	-cat result_current_ex05_ft_show_tab.txt | wc -l > | awk 'END{print NR}' result_ex05_current.txt
 	-diff result_ex05_current.txt result_ex05_sample.txt
 
 clean:
