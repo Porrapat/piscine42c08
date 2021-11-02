@@ -1,0 +1,40 @@
+0
+	| original : $xa$ @ 0x7fffd2c932c0
+	|   copied : $xa$ @ 0x7fffd2c93510
+	|     size : 2
+1
+	| original : $xb$ @ 0x7fffd2c932e0
+	|   copied : $xb$ @ 0x7fffd2c93530
+	|     size : 2
+2
+	| original : $xc$ @ 0x7fffd2c93300
+	|   copied : $xc$ @ 0x7fffd2c93550
+	|     size : 2
+3
+	| original : $xd$ @ 0x7fffd2c93320
+	|   copied : $xd$ @ 0x7fffd2c93570
+	|     size : 2
+4
+	| original : $xe$ @ 0x7fffd2c93340
+	|   copied : $xe$ @ 0x7fffd2c93590
+	|     size : 2
+5
+	| original : $xf$ @ 0x7fffd2c93360
+	|   copied : $xf$ @ 0x7fffd2c935b0
+	|     size : 2
+6
+	| original : $xg$ @ 0x7fffd2c93380
+	|   copied : $xg$ @ 0x7fffd2c935d0
+	|     size : 2
+7
+	| original : $xh$ @ 0x7fffd2c933a0
+	|   copied : $xh$ @ 0x7fffd2c935f0
+	|     size : 2
+8
+	| original : $xi$ @ 0x7fffd2c933c0
+	|   copied : $xi$ @ 0x7fffd2c93610
+	|     size : 2
+9
+	| original : $xj$ @ 0x7fffd2c933e0
+	|   copied : $xj$ @ 0x7fffd2c93630
+	|     size : 2

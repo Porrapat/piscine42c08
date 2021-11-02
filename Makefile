@@ -24,7 +24,9 @@ build-sample: compile
 	-./test_ex02 > result_sample_ex02.txt
 	-./test_ex03 > result_sample_ex03.txt
 	-./test_ex04_ft_strs_to_tab > result_sample_ex04_ft_strs_to_tab.txt
+	-cat result_sample_ex04_ft_strs_to_tab.txt | wc -l > result_ex04_sample.txt
 	-./test_ex05_ft_show_tab > result_sample_ex05_ft_show_tab.txt
+	-cat result_sample_ex05_ft_show_tab.txt | wc -l > result_ex05_sample.txt
 
 run:	compile
 	-./test_ex00 > result_current_ex00.txt
@@ -41,12 +43,16 @@ test:	all
 	-diff result_current_ex01.txt result_sample_ex01.txt
 	-diff result_current_ex02.txt result_sample_ex02.txt
 	-diff result_current_ex03.txt result_sample_ex03.txt
-#		-diff result_current_ex04_${EX04}.txt result_sample_ex04_${EX04}.txt
-#		-diff result_current_ex05_${EX05}.txt result_sample_ex05_${EX05}.txt
+	-cat result_current_ex04_ft_strs_to_tab.txt | wc -l > result_ex04_current.txt
+	-diff result_ex04_current.txt result_ex04_sample.txt
+	-cat result_current_ex05_ft_show_tab.txt | wc -l > result_ex05_current.txt
+	-diff result_ex05_current.txt result_ex05_sample.txt
 
 clean:
 	-rm -rf */*.out
 	-rm -rf result_current_ex*.txt
+	-rm -rf result_ex04_current.txt
+	-rm -rf result_ex05_current.txt
 	-rm test_ex00
 	-rm test_ex01
 	-rm test_ex02
