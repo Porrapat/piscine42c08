@@ -2,8 +2,8 @@
 
 norminette:
 	-norminette ./ex00/ft.h
-	-norminette ./ex01/ft_boolean.h
-	-norminette ./ex02/ft_abs.h
+	-norminette -R CheckDefine ./ex01/ft_boolean.h
+	-norminette -R CheckDefine ./ex02/ft_abs.h
 	-norminette ./ex03/ft_point.h
 	-norminette ./ex04/ft_stock_str.h
 	-norminette ./ex04/ft_strs_to_tab.c

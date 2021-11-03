@@ -14,18 +14,6 @@
 
 #include "./ex02/ft_abs.h"
 
-int	ABS(int value)
-{
-	if (value < 0)
-	{
-		return (-value);
-	}
-	else
-	{
-		return (value);
-	}
-}
-
 int	main(void)
 {
 	int	index;
