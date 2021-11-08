@@ -16,7 +16,7 @@ compile: norminette
 	-gcc test_ex02.c -Wall -Werror -Wextra -o test_ex02
 	-gcc test_ex03.c -Wall -Werror -Wextra -o test_ex03
 	-gcc test_ex04_ft_strs_to_tab.c ./ex04/ft_strs_to_tab.c -Wall -Werror -Wextra -o test_ex04_ft_strs_to_tab
-	-gcc test_ex05_ft_show_tab.c ./ex05/ft_str_length.c ./ex05/ft_show_tab.c -Wall -Werror -Wextra -o test_ex05_ft_show_tab
+	-gcc test_ex05_ft_show_tab.c ./ex05/ft_show_tab.c -Wall -Werror -Wextra -o test_ex05_ft_show_tab
 
 build-sample: compile
 	-./test_ex00 > result_sample_ex00.txt

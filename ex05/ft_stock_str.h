@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_show_tab.c                                      :+:      :+:    :+:   */
+/*   ft_stock_str.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppetchda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,15 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include "ex05/ft_stock_str.h"
+#ifndef FT_STOCK_STR_H
+# define FT_STOCK_STR_H
 
-void	ft_show_tab(struct s_stock_str *par);
-
-int	main(void)
+typedef struct s_stock_str
 {
-	printf("This is OK\n");
-	return (0);
-}
+	int			size;
+	char		*str;
+	char		*copy;
+}				t_stock_str;
+
+#endif
